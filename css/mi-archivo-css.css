@@ -1,0 +1,423 @@
+html, body, .barra-de-navegacion, ul,.sub-parrafo-container p {   /*le saco padding y margin para que mi navbar este pegada arriba*/
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+body {
+    background: rgb(116, 116, 116);
+}
+.barra-de-navegacion {                                           /* solo afecta a los clase navbar */
+    list-style: none;
+    background: #00b556;                                 /*aca defino la altura de guia digamos. despues los que estan "adentro" de la clase navbar*/
+    height: 60px;                                                  /*si les tiro height: 100%; van a heredar la altura de este, y el alineamiento vertical de los otros lo*/                                                       
+    -webkit-box-shadow: 0 8px 6px -6px #999;      /*voy retocando con el line-height: 2.6 , ej. el q tengo en li a */
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+    position: fixed; 
+    display: inline-block;
+    top: 0;
+    z-index: 1;
+
+}
+.barra-de-navegacion li {
+    display: inline;
+}
+.barra-de-navegacion > li+li:nth-child(n) {            /*recorre la lista de li. el li+li hace q saltee al primero*/
+    border-left: 2px solid #ffffff;
+}
+.barra-de-navegacion .item-barra-navegacion .navbar-boton {                                  /* solo afecta a los barra-de-navegacion->item-barra-navegacion->navbar-boton */
+    width: auto;                                                                              /*pero no solo eso, tambien el item-barra-navegacion es visto desde barrade-navegacion*/
+    height: 100%;                                                                           /*y el navbar-boton es visto desde el item-barra-navegacion, entonces por ej*/
+    background: #b62d73;                                                                    /*si le tiro right:50% va a ser el 50% del tamaño de */
+    line-height: 2.5;
+    text-decoration: none;
+    font-family: 'quicksand', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 24px;
+    padding: 0 2rem;
+    text-align: center;
+    display: inline-block;
+}                                                    /* hover de los navbar-item -> a, en hover*/
+.barra-de-navegacion .item-barra-navegacion .navbar-boton:hover{                /*afecta a a en hover de cada uno*/
+    background: #ec62a1;
+    transition: all 0.8s ease .01s;
+    /*border-radius: 50px;*/
+}
+.barra-de-navegacion .item-barra-navegacion .navbar-boton:active{                                    /* click de los navbar-item -> a*/
+    background-color: #b62d73;
+    transition: 0s;
+}
+.item-barra-navegacion{
+    height: 100%;
+}
+
+.barra-de-navegacion .navbar-item-right{                                  /* solo afecta a los clase navbar-item-right */
+    float: right !important;
+}
+
+.icono-navbar{                                           /* solo afecta a los id logo */
+    /*border: 1px solid black;*/
+    /*border-radius: 30px;*/
+    width: auto;
+    height: 100%;
+    margin-left: 60px;
+    float: left;
+    background: #b62d73;
+}     
+.icono-shop{
+    background: transparent;
+    margin: 0;
+}                          
+
+.big-container {
+    background: rgb(255, 255, 255);
+    color: #000000;
+    height: 600px;
+    margin: 0;
+    padding: 2rem 0 2rem 0;
+    display: flex;
+    min-height: fit-content;
+}
+.first-big-container{
+    min-height: max-content;
+    margin-top: 60px;
+    padding: 1rem;
+    padding: 30px 60px;
+}
+
+.sub-img-and-header-container{
+    display: inline-block;
+    width: 100%;
+    
+    
+}
+.sub-img-container{
+    margin: 1rem 5% 1rem 12rem;    
+    height: 500px;
+    width: 500px;
+    float: left;
+    display: block;
+}
+.sub-img-container-float-derecha{
+    float: right;
+    margin: 1rem 12rem 1rem 5%;
+}
+#img-en-big-container {    
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.sub-header-container{
+    height: fit-content;
+    width: auto;
+    display: block;
+    float: left;
+    color: rgb(53, 53, 53);
+    padding: 0;
+    font-size: 3rem;
+    position: relative;
+    top: 0%;
+    margin: 1em 0 0 0;
+
+}
+.sub-header-container-float-izquierda{
+    margin-left: 12rem;
+}
+.sub-header-container h3{
+    margin:0;
+    padding: 0;
+    position: relative;
+}
+.sub-parrafo-container{
+    border-right-width: 2rem;
+    border-style: solid;
+    border-left-style: none;
+    border-image: 
+    linear-gradient(
+      to bottom,
+      transparent, 
+      #59e884, 
+      transparent
+    ) 1 100%;
+    color: rgb(53, 53, 53);
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 0 1rem 0 1rem;
+    margin: 8rem 10rem 0 0;
+    float: top left;
+    max-height: 300px;
+    width: auto;
+    position: relative;
+    display: block;
+    overflow: auto;
+    text-align: start;
+}
+.sub-parrafo-container-float-izquierda{
+    margin: 8rem 0 0 10rem;  
+    border-left-width: 2rem;
+    border-style: solid;
+    border-right-style: none;
+}
+
+.my-portfolio-container{
+    background: transparent;
+    writing-mode: vertical-lr;
+    margin: 0;
+    min-width: fit-content;
+    height: fit-content;
+    /*text-orientation: upright;*/              /*<-- esto es para q quede presentable*/
+    
+}
+.barrita-separadora:before{
+	content: "";
+    position: absolute;
+    margin-left: 50%;
+    transform: translateX(-50%);
+	width: 20%;
+	height: 2px;
+	background-image: linear-gradient(to right, transparent, #b62d73, transparent);
+}
+
+.portfolio-text{    
+    display: inline-block;
+    background: transparent;
+    top: 0;
+    height: fit-content;
+    width: fit-content;
+    padding: 0;
+    margin: 0;
+    font-size: 3.5rem;
+    font-family: 'quicksand',Arial;
+    writing-mode: horizontal-tb;
+}
+.my-text {
+    float: left;
+    background: transparent;
+    display: block;
+    height: fit-content;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-orientation: sideways;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    letter-spacing: .01rem;
+}
+.my-portfolio-text-block{
+    height: fit-content;
+    width: fit-content;
+    background: transparent;
+}
+.by-me-container{
+    
+    margin: 10rem auto;
+    position: absolute; 
+    transform: translateX(-50%);
+    left: 50%;
+    text-align: center;        
+    width: fit-content;
+    height: fit-content;
+    background: transparent;
+}
+.by-me-text{
+    word-spacing: .1rem;
+    font-family: 'Courier New', Courier, monospace, Arial;
+    font-size: 2rem;
+    font-weight: 500;
+    
+}
+#hidden{
+    display: none;
+}
+#me-logo{
+    display: block;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    margin-top: 10px;
+    height: 175px;
+    width: auto;
+}
+#and-this-turtle-text{
+    font-size: 1rem;
+    font-family: monospace, Arial;
+    font-weight: 100;
+    margin: auto;
+    display: block;
+}
+.by-me-text:hover + #hidden{
+                                    /*el + hace q tambien se cuente el elemento con id me-logo que SUCEDA en codigo html a by-me-text, si el orden de estos esta invertido no anda*/
+    display: block;                 /*y la otra forma de hacerlo es si pongo el hover en el by-me-container y no necesito el mas, pero cuando la imagen se muestra si hovereo sobre*/
+                                    /*la imagen, entonces se sigue mostrando y yo quiero q solo pase si hovereo sobre el texto*/
+
+}
+
+footer{
+    background: #00b556;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 3rem 0;
+
+}
+footer p{
+    margin:0;
+    padding:0;
+}
+
+
+
+
+
+
+
+.overlay {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity .05s;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 150px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+  
+  .popup h2 {
+    margin: 0 0 1rem 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.11);
+  }
+  .popup .close-popup-button {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all .2s;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close-popup-button:hover {
+    color: #ec62a1;
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 400;
+  }
+
+
+.contacto-container{
+    padding: 0 6rem 0 6rem;
+    margin: 0 5% 0 5%;
+    
+}
+.contacto-container h1{
+    font-size: 3rem;
+    font-family: 'quicksand', 'Times New Roman', Times, serif;
+}
+.contacto-container p{
+    font-size: 1.3rem;
+    font-family: Arial, 'Times New Roman', Times, serif;
+}
+.barrita-separadora-izquierda{
+    margin-bottom: 5rem;
+}
+.barrita-separadora-izquierda:before{
+    content: "";
+    position: absolute;
+    left: 0;
+	width: 70%;
+	height: 2px;
+	background-image: linear-gradient(to right,#b62d73, #b62d73, transparent);
+}
+
+
+
+
+
+
+
+.wrapper {
+  padding: 0;
+  text-align: center;
+  top: 0;
+  background: rgb(255, 255, 255);
+  padding: 0 0 10rem 0;
+}
+
+.wrapper .fa{
+    padding: 1rem;
+    font-size: 3rem;
+    width: 50px;
+    height: 50px;
+    color: white;
+    background: #00b556;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 1rem;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+
+/*
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+.fa-twitter{
+    background: #55ACEE;
+    color: white;
+}
+.fa-reddit{
+    background: #ff5700;
+    color: white;
+}
+.fa-linkedin{    
+    background: #007bb5;
+    color: white;
+}
+.fa-google{
+    background: #dd4b39;
+    color: white;
+}
+.fa-instagram{
+    background: #405DE6;
+    color: white;
+}
+.fa-youtube{
+    background: #c4302b;
+    color: white;
+}
+.fa-github{
+    background: #333;
+    color:white;
+}
+*/
+
+
+
+
+.wrapper .fa{
+    text-shadow: 0 13.36px 8.896px #303030,0 0px 10px rgb(112, 112, 112);
+}
