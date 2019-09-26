@@ -10,7 +10,7 @@ body {
 
 .barra-de-navegacion {                                           /* solo afecta a los clase navbar */
     list-style: none;
-    background: #00b556;                                 /*aca defino la altura de guia digamos. despues los que estan "adentro" de la clase navbar*/
+    background: #06013D;                                 /*aca defino la altura de guia digamos. despues los que estan "adentro" de la clase navbar*/
     height: 4rem;                                                  /*si les tiro height: 100%; van a heredar la altura de este, y el alineamiento vertical de los otros lo*/                                                       
     -webkit-box-shadow: 0 8px 6px -6px #999;      /*voy retocando con el line-height: 2.6 , ej. el q tengo en li a */
     -moz-box-shadow: 0 8px 6px -6px #999;
@@ -38,18 +38,20 @@ body {
     font-size: 1.7rem;
     padding-left: 2rem;
     padding-right: 2rem;
-    transition: all 0.2s ease .01s;
+    transition: all 0.3s ease .01s;
     text-align: center;
     display: flex;
     align-items: center;
 }                                 
 .barra-de-navegacion .item-barra-navegacion .navbar-boton:hover{                
-    background: #ec62a1;                                                        /* hover de los navbar-item -> a, en hover*/
+    background: #0B0270;                                                        /* hover de los navbar-item -> a, en hover*/
     box-shadow: 0 5px 8.896px #9b9b9b,0 0px 0px rgb(112, 112, 112);             /*afecta a a en hover de cada uno*/
     /*border-radius: 50px;*/
 }
 .barra-de-navegacion .item-barra-navegacion .navbar-boton:active{                                    /* click de los navbar-item -> a*/
-    background-color: #b62d73;
+    background-color: #1304BD;
+    transition: 0s;
+    opacity: 0.7;
 }
 .item-barra-navegacion{
     height: 100%;
@@ -175,7 +177,7 @@ body {
     transform: translateX(-50%);
 	width: 70%;
 	height: 2px;
-	background-image: linear-gradient(to right, transparent, #b62d73, transparent);
+	background-image: linear-gradient(to right, transparent, #3B3488, transparent);
 }
 
 .logo-text{
@@ -326,7 +328,7 @@ footer p{
     color: #333;
 }
 .modal .close-modal-button:hover {
-    color: #ec62a1;
+    color: #1304BD;
 }
 .modal .content {
     max-height: 30%;
@@ -359,7 +361,7 @@ footer p{
     left: 0;
 	width: 70%;
 	height: 2px;
-	background-image: linear-gradient(to right,#b62d73, #b62d73, transparent);
+	background-image: linear-gradient(to right,#3B3488, #3B3488, transparent);
 }
 .barrita-separadora-footer:before{
     content: "";
@@ -368,7 +370,7 @@ footer p{
     transform: translateX(-50%);
 	width: 100%;
     height: 1px;
-    background: #b62d747a;
+    background: #3B3488;
 }
 
 
@@ -393,7 +395,7 @@ footer p{
     min-width: fit-content;
     width: 3rem;
     height: auto;
-    color: #006330;
+    color: #006B70;
     background: transparent;
     text-align: center;
     text-decoration: none;
@@ -444,3 +446,8 @@ footer p{
 .wrapper .fa{
     text-shadow: 15px 13.36px 8.896px #303030,0 0px 0px rgb(112, 112, 112);
 }*/
+
+#logo-principal{
+    height: 15rem;
+    width: auto;
+}
