@@ -7,6 +7,7 @@ html, body, .barra-de-navegacion, ul,.sub-parrafo-container p {   /*le saco padd
 body {
     background: rgb(116, 116, 116);
 }
+
 .barra-de-navegacion {                                           /* solo afecta a los clase navbar */
     list-style: none;
     background: #00b556;                                 /*aca defino la altura de guia digamos. despues los que estan "adentro" de la clase navbar*/
@@ -62,14 +63,17 @@ body {
     /*border-radius: 30px;*/
     width: auto;
     height: 100%;
-    margin-left: 60px;
     float: left;
     background: transparent;
 }     
 .icono-shop{
     background: transparent;
     margin: 0;
-}                          
+} 
+.icono-home{    
+    margin-left: 50%;
+    transform: translateX(-50%);
+}                        
 
 .big-container {
     color: #000000;
@@ -167,9 +171,10 @@ body {
     border-right-style: none;
 }
 
-.my-portfolio-container{
+.un-logo-container{
     background: transparent;
     writing-mode: vertical-lr;
+    color: white;
     margin: 2rem auto 4rem auto;
     min-width: fit-content;
     height: fit-content;
@@ -186,21 +191,22 @@ body {
 	background-image: linear-gradient(to right, transparent, #b62d73, transparent);
 }
 
-.portfolio-text{
+.logo-text{
     background: rgb(0, 217, 255);
     top: 0;
     height: fit-content;
     width: fit-content;
-    padding: 0;
+    padding: 0 1rem 0 1rem;
     margin: 0;
     font-size: 3.5rem;
     font-family: 'quicksand',Arial;
     writing-mode: horizontal-tb;
 }
-.my-text {
+.un-text {
     float: left;
     background: rgb(0, 183, 255);
     display: block;
+    padding: .5rem;
     height: fit-content;
     font-size: 2.5rem;
     font-weight: 400;
@@ -208,7 +214,7 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     letter-spacing: .01rem;
 }
-.my-portfolio-text-block{
+.un-logo-text-block{
     height: fit-content;
     width: fit-content;
     background: rgb(0, 102, 255);
@@ -257,7 +263,14 @@ body {
                                     /*la imagen, entonces se sigue mostrando y yo quiero q solo pase si hovereo sobre el texto*//*
 
 }*/
-
+.header-contacto{
+    font-size: 3rem;
+    color: #646464;
+}
+.paragraph-contacto{
+    font-size: 1.3rem;
+    color: #636363;
+}
 footer{
     background: #fff;
     color: #868686;
@@ -377,7 +390,7 @@ footer p{
     width: 100%;
     text-align: center;
     bottom: 0;
-    padding: 0 0 10rem 0;
+    padding: 2rem 0 10rem 0;
 }
 
 .wrapper .fa{
