@@ -11,7 +11,7 @@ body {
 .barra-de-navegacion {                                           /* solo afecta a los clase navbar */
     list-style: none;
     background: #00b556;                                 /*aca defino la altura de guia digamos. despues los que estan "adentro" de la clase navbar*/
-    height: 60px;                                                  /*si les tiro height: 100%; van a heredar la altura de este, y el alineamiento vertical de los otros lo*/                                                       
+    height: 4rem;                                                  /*si les tiro height: 100%; van a heredar la altura de este, y el alineamiento vertical de los otros lo*/                                                       
     -webkit-box-shadow: 0 8px 6px -6px #999;      /*voy retocando con el line-height: 2.6 , ej. el q tengo en li a */
     -moz-box-shadow: 0 8px 6px -6px #999;
     box-shadow: 0 8px 6px -6px #999;
@@ -31,20 +31,21 @@ body {
     width: auto;                                                                              /*pero no solo eso, tambien el item-barra-navegacion es visto desde barrade-navegacion*/
     height: 100%;                                                                           /*y el navbar-boton es visto desde el item-barra-navegacion, entonces por ej*/
     background: transparent;                                                                    /*si le tiro right:50% va a ser el 50% del tamaño de */
-    line-height: 2.5;
     text-decoration: none;
     font-family: 'quicksand', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial;
     color: #ffffff;
     font-weight: 700;
-    font-size: 24px;
-    padding: 0 2rem;
+    font-size: 1.7rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     transition: all 0.2s ease .01s;
     text-align: center;
-    display: inline-block;
-}                                                    /* hover de los navbar-item -> a, en hover*/
-.barra-de-navegacion .item-barra-navegacion .navbar-boton:hover{                /*afecta a a en hover de cada uno*/
-    background: #ec62a1;
-    box-shadow: 0 5px 8.896px #9b9b9b,0 0px 0px rgb(112, 112, 112);
+    display: flex;
+    align-items: center;
+}                                 
+.barra-de-navegacion .item-barra-navegacion .navbar-boton:hover{                
+    background: #ec62a1;                                                        /* hover de los navbar-item -> a, en hover*/
+    box-shadow: 0 5px 8.896px #9b9b9b,0 0px 0px rgb(112, 112, 112);             /*afecta a a en hover de cada uno*/
     /*border-radius: 50px;*/
 }
 .barra-de-navegacion .item-barra-navegacion .navbar-boton:active{                                    /* click de los navbar-item -> a*/
@@ -77,41 +78,40 @@ body {
 
 .big-container {
     color: #000000;
-    margin: 0;
+    margin: auto;
     padding: 2rem 0 2rem 0;
     display: flex;
     min-height: fit-content;
 }
 #first-big-container{
     min-height: max-content;
-    margin-top: 60px;
+    margin-top: 4rem;
     padding: 1rem;
-    padding: 30px 60px;
+    padding: 3rem 4rem;
 }
 .white-big-container{
     background: #fff;
 }
-.grey-big-container{
-    
+.grey-big-container{    
     background: #ebebeb;
 }
 
 .sub-img-and-header-container{
-    display: inline-block;
-    width: 100%;
-    
-    
+    background: pink;
+    width: 80%;
+    margin: auto;
+    display: inline-block;    
 }
 .sub-img-container{
-    margin: 1rem 5% 1rem 12rem;    
-    height: 500px;
-    width: 500px;
+    margin: 1rem 3rem 1rem 0;    
+    height: 25rem;
+    width: 25rem;
     float: left;
     display: block;
 }
 .sub-img-container-float-derecha{
     float: right;
-    margin: 1rem 12rem 1rem 5%;
+    margin: 1rem 0 1rem 3rem;
 }
 #img-en-big-container {    
     height: 100%;
@@ -133,44 +133,22 @@ body {
     font-family: Arial, Helvetica, sans-serif, Courier, monospace
 
 }
-.sub-header-container-float-izquierda{
-    margin-left: 12rem;
-}
 .sub-header-container h3{
     margin:0;
     padding: 0;
-    position: relative;
 }
 .sub-parrafo-container{
-    border-right-width: 2rem;
-    border-style: solid;
-    border-left-style: none;
-    border-image: 
-    linear-gradient(
-      to bottom,
-      #ff94d3, 
-      transparent
-    ) 1 100%;
     color: #636363;
     font-size: 1.3rem;
     font-weight: 500;
-    padding: 0 1rem 0 1rem;
-    margin: 8rem 10rem 0 0;
+    padding: 0;
+    margin-top: 8rem;
     float: top left;
-    max-height: 300px;
+    max-height: 15rem;
     width: auto;
-    position: relative;
-    display: block;
     overflow: auto;
     text-align: start;
 }
-.sub-parrafo-container-float-izquierda{
-    margin: 8rem 0 0 10rem;  
-    border-left-width: 2rem;
-    border-style: solid;
-    border-right-style: none;
-}
-
 .un-logo-container{
     background: transparent;
     writing-mode: vertical-lr;
@@ -192,7 +170,7 @@ body {
 }
 
 .logo-text{
-    background: rgb(0, 217, 255);
+    background: #6ae9ff;
     top: 0;
     height: fit-content;
     width: fit-content;
@@ -204,7 +182,7 @@ body {
 }
 .un-text {
     float: left;
-    background: rgb(0, 183, 255);
+    background: #00b7ff;
     display: block;
     padding: .5rem;
     height: fit-content;
@@ -217,7 +195,7 @@ body {
 .un-logo-text-block{
     height: fit-content;
     width: fit-content;
-    background: rgb(0, 102, 255);
+    background: #0087cb;
 }/*
 .by-me-container{
     
@@ -272,6 +250,7 @@ body {
     color: #636363;
 }
 footer{
+    font-size: 1rem;
     background: #fff;
     color: #868686;
     text-align: center;
@@ -301,41 +280,46 @@ footer p{
     visibility: hidden;
     opacity: 0;
 }
-  .overlay:target {
+.overlay:target {
     visibility: visible;
     opacity: 1;
 }
   
-  .popup {
-    margin: 150px auto;
-    padding: 20px;
+.modal {
+    margin: 2rem auto;
+    padding: 1rem 3rem;
     background: #fff;
     border-radius: 5px;
     width: 30%;
+    height: fit-content;
     position: relative;
     transition: all 5s ease-in-out;
 }
   
-  .popup h2 {
-    margin: 0 0 1rem 0;
+.modal h2 {
+    margin-bottom: 1rem;
     color: #333;
     font-family: Tahoma, Arial, sans-serif;
     border-bottom: 1px solid rgba(51, 51, 51, 0.11);
 }
-  .popup .close-popup-button {
+.modal .content{
+    color: #333;
+    padding-bottom: 2rem;
+}
+.modal .close-modal-button {
     position: absolute;
-    top: 10px;
-    right: 30px;
+    top: 0.5rem;
+    right: 1.5rem;
     transition: all .2s;
     font-size: 2rem;
     font-weight: bold;
     text-decoration: none;
     color: #333;
 }
-  .popup .close-popup-button:hover {
+.modal .close-modal-button:hover {
     color: #ec62a1;
 }
-  .popup .content {
+.modal .content {
     max-height: 30%;
     overflow: auto;
     font-size: 1.2rem;
@@ -396,8 +380,10 @@ footer p{
 .wrapper .fa{
     padding: .5rem;
     font-size: 3rem;
-    width: 50px;
-    height: 50px;
+    min-height: fit-content;
+    min-width: fit-content;
+    width: 3rem;
+    height: auto;
     color: #006330;
     background: transparent;
     text-align: center;
