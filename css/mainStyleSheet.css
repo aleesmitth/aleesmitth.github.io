@@ -37,25 +37,24 @@ body {
     font-weight: 700;
     font-size: 24px;
     padding: 0 2rem;
+    transition: all 0.2s ease .01s;
     text-align: center;
     display: inline-block;
 }                                                    /* hover de los navbar-item -> a, en hover*/
 .barra-de-navegacion .item-barra-navegacion .navbar-boton:hover{                /*afecta a a en hover de cada uno*/
     background: #ec62a1;
-    transition: all 0.2s ease .01s;
     box-shadow: 0 5px 8.896px #9b9b9b,0 0px 0px rgb(112, 112, 112);
     /*border-radius: 50px;*/
 }
 .barra-de-navegacion .item-barra-navegacion .navbar-boton:active{                                    /* click de los navbar-item -> a*/
     background-color: #b62d73;
-    transition: 0s;
 }
 .item-barra-navegacion{
     height: 100%;
 }
 
 .barra-de-navegacion .navbar-item-right{                                  /* solo afecta a los clase navbar-item-right */
-    float: right !important;
+    float: right;
 }
 
 .icono-navbar{                                           /* solo afecta a los id logo */
@@ -73,19 +72,24 @@ body {
 }                          
 
 .big-container {
-    background: rgb(255, 255, 255);
     color: #000000;
-    height: 600px;
     margin: 0;
     padding: 2rem 0 2rem 0;
     display: flex;
     min-height: fit-content;
 }
-.first-big-container{
+#first-big-container{
     min-height: max-content;
     margin-top: 60px;
     padding: 1rem;
     padding: 30px 60px;
+}
+.white-big-container{
+    background: #fff;
+}
+.grey-big-container{
+    
+    background: #ebebeb;
 }
 
 .sub-img-and-header-container{
@@ -116,12 +120,13 @@ body {
     width: auto;
     display: block;
     float: left;
-    color: rgb(53, 53, 53);
+    color: #646464;
     padding: 0;
     font-size: 3rem;
     position: relative;
     top: 0%;
     margin: 1em 0 0 0;
+    font-family: Arial, Helvetica, sans-serif, Courier, monospace
 
 }
 .sub-header-container-float-izquierda{
@@ -139,11 +144,10 @@ body {
     border-image: 
     linear-gradient(
       to bottom,
-      transparent, 
-      #59e884, 
+      #ff94d3, 
       transparent
     ) 1 100%;
-    color: rgb(53, 53, 53);
+    color: #636363;
     font-size: 1.3rem;
     font-weight: 500;
     padding: 0 1rem 0 1rem;
@@ -166,7 +170,7 @@ body {
 .my-portfolio-container{
     background: transparent;
     writing-mode: vertical-lr;
-    margin: 0;
+    margin: 2rem auto 4rem auto;
     min-width: fit-content;
     height: fit-content;
     /*text-orientation: upright;*/              /*<-- esto es para q quede presentable*/
@@ -182,9 +186,8 @@ body {
 	background-image: linear-gradient(to right, transparent, #b62d73, transparent);
 }
 
-.portfolio-text{    
-    display: inline-block;
-    background: transparent;
+.portfolio-text{
+    background: rgb(0, 217, 255);
     top: 0;
     height: fit-content;
     width: fit-content;
@@ -196,7 +199,7 @@ body {
 }
 .my-text {
     float: left;
-    background: transparent;
+    background: rgb(0, 183, 255);
     display: block;
     height: fit-content;
     font-size: 2.5rem;
@@ -208,8 +211,8 @@ body {
 .my-portfolio-text-block{
     height: fit-content;
     width: fit-content;
-    background: transparent;
-}
+    background: rgb(0, 102, 255);
+}/*
 .by-me-container{
     
     margin: 10rem auto;
@@ -223,9 +226,10 @@ body {
 }
 .by-me-text{
     word-spacing: .1rem;
-    font-family: 'Courier New', Courier, monospace, Arial;
+    font-family: Arial,'Courier New', Courier, monospace, Arial;
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 50;
+    color: #4e4e4e;
     
 }
 #hidden{
@@ -247,19 +251,19 @@ body {
     margin: auto;
     display: block;
 }
-.by-me-text:hover + #hidden{
+.by-me-text:hover + #hidden{*/
                                     /*el + hace q tambien se cuente el elemento con id me-logo que SUCEDA en codigo html a by-me-text, si el orden de estos esta invertido no anda*/
-    display: block;                 /*y la otra forma de hacerlo es si pongo el hover en el by-me-container y no necesito el mas, pero cuando la imagen se muestra si hovereo sobre*/
-                                    /*la imagen, entonces se sigue mostrando y yo quiero q solo pase si hovereo sobre el texto*/
+    /*display: block;*/                 /*y la otra forma de hacerlo es si pongo el hover en el by-me-container y no necesito el mas, pero cuando la imagen se muestra si hovereo sobre*/
+                                    /*la imagen, entonces se sigue mostrando y yo quiero q solo pase si hovereo sobre el texto*//*
 
-}
+}*/
 
 footer{
-    background: #bdbdbd;
-    color: rgb(0, 0, 0);
+    background: #fff;
+    color: #868686;
     text-align: center;
-    padding: 2rem 0;
-
+    padding: 3rem 0;
+    
 }
 footer p{
     margin:0;
@@ -283,11 +287,11 @@ footer p{
     transition: opacity .05s;
     visibility: hidden;
     opacity: 0;
-  }
+}
   .overlay:target {
     visibility: visible;
     opacity: 1;
-  }
+}
   
   .popup {
     margin: 150px auto;
@@ -297,34 +301,34 @@ footer p{
     width: 30%;
     position: relative;
     transition: all 5s ease-in-out;
-  }
+}
   
   .popup h2 {
     margin: 0 0 1rem 0;
     color: #333;
     font-family: Tahoma, Arial, sans-serif;
     border-bottom: 1px solid rgba(51, 51, 51, 0.11);
-  }
+}
   .popup .close-popup-button {
     position: absolute;
-    top: 20px;
+    top: 10px;
     right: 30px;
     transition: all .2s;
     font-size: 2rem;
     font-weight: bold;
     text-decoration: none;
     color: #333;
-  }
+}
   .popup .close-popup-button:hover {
     color: #ec62a1;
-  }
+}
   .popup .content {
     max-height: 30%;
     overflow: auto;
     font-size: 1.2rem;
     color: #333;
     font-weight: 400;
-  }
+}
 
 
 .contacto-container{
@@ -351,6 +355,15 @@ footer p{
 	height: 2px;
 	background-image: linear-gradient(to right,#b62d73, #b62d73, transparent);
 }
+.barrita-separadora-footer:before{
+    content: "";
+    position: absolute;
+    margin-left: 50%;
+    transform: translateX(-50%);
+	width: 100%;
+    height: 1px;
+    background: #b62d747a;
+}
 
 
 
@@ -358,14 +371,12 @@ footer p{
 
 
 
-.wrapper {
+.wrapper{
     display: inline-block;
     padding: 0;
-    min-height: fit-content;
     width: 100%;
     text-align: center;
-    top: 0;
-    background: rgb(255, 255, 255);
+    bottom: 0;
     padding: 0 0 10rem 0;
 }
 
@@ -375,7 +386,7 @@ footer p{
     width: 50px;
     height: 50px;
     color: #006330;
-    background: #ffffff;
+    background: transparent;
     text-align: center;
     text-decoration: none;
     border-radius: 2rem;
