@@ -29,7 +29,7 @@ body {
 .barra-de-navegacion .item-barra-navegacion .navbar-boton {                                  /* solo afecta a los barra-de-navegacion->item-barra-navegacion->navbar-boton */
     width: auto;                                                                              /*pero no solo eso, tambien el item-barra-navegacion es visto desde barrade-navegacion*/
     height: 100%;                                                                           /*y el navbar-boton es visto desde el item-barra-navegacion, entonces por ej*/
-    background: #b62d73;                                                                    /*si le tiro right:50% va a ser el 50% del tamaño de */
+    background: transparent;                                                                    /*si le tiro right:50% va a ser el 50% del tamaño de */
     line-height: 2.5;
     text-decoration: none;
     font-family: 'quicksand', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial;
@@ -42,7 +42,8 @@ body {
 }                                                    /* hover de los navbar-item -> a, en hover*/
 .barra-de-navegacion .item-barra-navegacion .navbar-boton:hover{                /*afecta a a en hover de cada uno*/
     background: #ec62a1;
-    transition: all 0.8s ease .01s;
+    transition: all 0.2s ease .01s;
+    box-shadow: 0 5px 8.896px #9b9b9b,0 0px 0px rgb(112, 112, 112);
     /*border-radius: 50px;*/
 }
 .barra-de-navegacion .item-barra-navegacion .navbar-boton:active{                                    /* click de los navbar-item -> a*/
@@ -64,7 +65,7 @@ body {
     height: 100%;
     margin-left: 60px;
     float: left;
-    background: #b62d73;
+    background: transparent;
 }     
 .icono-shop{
     background: transparent;
