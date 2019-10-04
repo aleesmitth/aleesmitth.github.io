@@ -222,7 +222,7 @@ body {
 }
 #block {
     background-image: url("../img/colores-vertical.jpg");
-    filter: saturate(3.5) blur(1px) contrast(5);
+    filter: saturate(3.5) blur(2px) contrast(5);
     overflow: hidden;
     /* IE */
     -moz-opacity: 0.7;
