@@ -14,7 +14,7 @@ body {
 
 .barra-de-navegacion {                                           /* solo afecta a los clase navbar */
     list-style: none;
-    background: #06013D;                                 /*aca defino la altura de guia digamos. despues los que estan "adentro" de la clase navbar*/
+    background: #0B0270;                                 /*aca defino la altura de guia digamos. despues los que estan "adentro" de la clase navbar*/
     height: 4rem;                                                  /*si les tiro height: 100%; van a heredar la altura de este, y el alineamiento vertical de los otros lo*/                                                       
     -webkit-box-shadow: 0 8px 6px -6px #999;      /*voy retocando con el line-height: 2.6 , ej. el q tengo en li a */
     -moz-box-shadow: 0 8px 6px -6px #999;
@@ -117,6 +117,37 @@ body {
     margin: 0 25%;
     display: inline-block;    
 }
+.sub-video-and-header-container{
+    width:80%;
+    margin: 0 15%;
+    display: inline-block;
+}
+.sub-video-container{
+    margin: 1rem 3rem 1rem 0;
+    height: 315px;
+    width: 560px;
+    display: block;
+    float: left;
+}
+.sub-video2-and-header-container{
+    width:50%;
+    margin: 5% auto 5% auto;
+    display: inline-block;
+}
+.sub-video2-container{
+    margin: auto;
+    margin-bottom: 2%;
+    height: 315px;
+    width: 560px;
+    display: block;
+}
+.sub-video2-and-header-container > .sub-parrafo-container{
+    max-height: 15rem;
+}
+.sub-video2-and-header-container > .sub-header-container{
+    background: hotpink;
+}
+
 .sub-img-container{
     margin: 1rem 3rem 1rem 0;    
     height: 15rem;
@@ -133,6 +164,10 @@ body {
     width: 100%;
     object-fit: cover;
     border-radius: 50%;
+}
+.video-en-big-container{
+    height: 100%;
+    width: 100%;
 }
 .sub-header-container{
     height: fit-content;
@@ -313,8 +348,8 @@ body {
 }
 footer{
     font-size: 1rem;
-    background: #fff;
-    color: #868686;
+    background: #06013D;
+    color: #929292;
     text-align: center;
     padding: 3rem 0;
     
@@ -332,7 +367,7 @@ footer p{
 
 .overlay {
     position: fixed;
-    z-index: 1;
+    z-index: 600;
     top: 0;
     bottom: 0;
     left: 0;
@@ -348,7 +383,7 @@ footer p{
 }
   
 .modal {
-    margin: 2rem auto;
+    margin: 7rem auto;
     padding: 1rem 3rem;
     background: #fff;
     border-radius: 5px;
