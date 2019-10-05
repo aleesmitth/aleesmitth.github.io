@@ -114,13 +114,13 @@ body {
 }
 .sub-img-and-header-container{
     width: 80%;
-    margin: auto;
+    margin: 0 25%;
     display: inline-block;    
 }
 .sub-img-container{
     margin: 1rem 3rem 1rem 0;    
-    height: 25rem;
-    width: 25rem;
+    height: 15rem;
+    width: 15rem;
     float: left;
     display: block;
 }
@@ -139,9 +139,9 @@ body {
     width: auto;
     display: block;
     float: left;
-    color: #646464;
+    color: #525252;
     padding: 0;
-    font-size: 3rem;
+    font-size: 1.5rem;
     position: relative;
     top: 0%;
     z-index: 1;
@@ -154,13 +154,13 @@ body {
     padding: 0;
 }
 .sub-parrafo-container{
-    color: #636363;
+    color: #363636;
     font-size: 1.3rem;
     font-weight: 500;
     padding: 0;
     margin-top: 8rem;
     float: top;
-    max-height: 15rem;
+    max-height: 7rem;
     width: auto;
     overflow: auto;
     text-align: start;
@@ -546,6 +546,8 @@ footer p{
 .card-body > .card-text{
     text-align: justify;
     margin-bottom: 2rem;
+    max-height: 15rem;
+    overflow: hidden;
 }
 .btn{
     text-decoration: none;
