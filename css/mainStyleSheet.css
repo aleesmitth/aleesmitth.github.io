@@ -126,6 +126,9 @@ a{
 }
 .sub-video-and-header-container > .sub-header-container{
     background: hotpink;
+    color: #fff;
+    width: 100%;
+    text-align: center;
 }
 .video-en-big-container{
     height: 100%;
@@ -154,7 +157,7 @@ a{
     width: auto;
     display: block;
     float: left;
-    color: #525252;
+    color: #3a3a3a;
     padding: 0;
     font-size: 1.5rem;
     position: relative;
@@ -169,7 +172,7 @@ a{
     padding: 0;
 }
 .sub-parrafo-container{
-    color: #363636;
+    color: #636363;
     font-size: 1.3rem;
     font-weight: 500;
     padding: 0;
@@ -197,7 +200,7 @@ a{
     transform: translateX(-50%);
 	width: 70%;
 	height: 2px;
-	background-image: linear-gradient(to right, transparent, #3B3488, transparent);
+	background-image: linear-gradient(to right, transparent, #333, transparent);
 }
 
 .logo-text{
@@ -320,7 +323,7 @@ a{
 }*/
 .header-contacto{
     font-size: 3rem;
-    color: #646464;
+    color: #3a3a3a;
 }
 .paragraph-contacto{
     font-size: 1.3rem;
@@ -457,7 +460,7 @@ footer p{
     left: 0;
 	width: 70%;
 	height: 2px;
-	background-image: linear-gradient(to right,#3B3488, #3B3488, transparent);
+	background-image: linear-gradient(to right,lightblue, lightblue, transparent);
 }
 .barrita-separadora-footer:before{
     content: "";
@@ -466,7 +469,7 @@ footer p{
     transform: translateX(-50%);
 	width: 100%;
     height: 1px;
-    background: #3B3488;
+    background: hotpink;
 }
 
 
@@ -580,7 +583,7 @@ footer p{
 }
 .card-body{
     padding: 0 5% 10% 5%;
-    color: #333;
+    color: #636363;
 }
 .card-body > .card-title{
     font-size: 1.2rem;
@@ -588,6 +591,7 @@ footer p{
     margin: 10% 0 0;
     padding-bottom: 5%;
     border-bottom: 1px solid hotpink;
+    color: #3a3a3a;
 }
 .card-body > .card-text{
     text-align: justify;
