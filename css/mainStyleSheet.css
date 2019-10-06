@@ -11,6 +11,9 @@ body {
     background: rgb(122, 177, 41);
     color: #fff;
 }
+a{
+    text-decoration: none;
+}
 
 .barra-de-navegacion {                                           /* solo afecta a los clase navbar */
     list-style: none;
@@ -94,18 +97,7 @@ body {
     padding: 1rem;
     padding: 3rem 4rem;
 }
-@media screen and (max-width: 1000px){
-    .barra-de-navegacion{
-        height: 7rem;
-    }
-    .icono-home{
-        margin-left: 1rem;
-        transform: translateX(50%);
-    }
-    #first-big-container{        
-        margin-top: 7rem;
-    }
-}
+
 .white-big-container{
     background: #fff;
 }
@@ -118,34 +110,26 @@ body {
     display: inline-block;    
 }
 .sub-video-and-header-container{
-    width:80%;
-    margin: 0 15%;
-    display: inline-block;
-}
-.sub-video-container{
-    margin: 1rem 3rem 1rem 0;
-    height: 315px;
-    width: 560px;
-    display: block;
-    float: left;
-}
-.sub-video2-and-header-container{
     width:50%;
     margin: 5% auto 5% auto;
     display: inline-block;
 }
-.sub-video2-container{
+.sub-video-container{
     margin: auto;
     margin-bottom: 2%;
-    height: 315px;
-    width: 560px;
+    width: 840px;
+    height: 472.5px;
     display: block;
 }
-.sub-video2-and-header-container > .sub-parrafo-container{
+.sub-video-and-header-container > .sub-parrafo-container{
     max-height: 15rem;
 }
-.sub-video2-and-header-container > .sub-header-container{
+.sub-video-and-header-container > .sub-header-container{
     background: hotpink;
+}
+.video-en-big-container{
+    height: 100%;
+    width: 100%;
 }
 
 .sub-img-container{
@@ -164,10 +148,6 @@ body {
     width: 100%;
     object-fit: cover;
     border-radius: 50%;
-}
-.video-en-big-container{
-    height: 100%;
-    width: 100%;
 }
 .sub-header-container{
     height: fit-content;
@@ -367,7 +347,7 @@ footer p{
 
 .overlay {
     position: fixed;
-    z-index: 600;
+    z-index: 5;
     top: 0;
     bottom: 0;
     left: 0;
@@ -393,7 +373,7 @@ footer p{
     transition: all 5s ease-in-out;
 }
 .modal-video {
-    margin: 15rem auto;
+    margin: 2rem auto;
     position: absolute;
     top: 0;
     left: 0;
@@ -405,9 +385,9 @@ footer p{
     transition: opacity .05s;
 }
 .modal-video .content{
-    margin: 5rem auto;
-    width: 560px;
-    height: 315px;
+    margin: auto;
+    width: 840px;
+    height: 472.5px;
     color: #333;
     font-weight: 400;
     
@@ -583,9 +563,10 @@ footer p{
     border-style: none;
 }
 .card{
+    position: relative;
     box-shadow: 0 1px 2px rgba(0,0,0,0.15);
     transition: box-shadow 0.3s ease-out;
-    margin: 5%;
+    margin: 3%;
     flex: 1;
     max-width: 50%;
     background: #fff;
@@ -627,9 +608,44 @@ footer p{
     font-family: 'quicksand', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial;
 }
 .btn:hover{
-    background: #6300ee2c;
-}
+    /*background: #6300ee2c;*/
+    color: #fff;
+    background: #6200ee;
+    
+}/*
 .btn:focus{
     color: #fff;
     background: #6200ee;
+}*/
+.clickeable{ 
+    position:absolute; 
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;  
+    z-index: 1;
+}
+@media screen and (max-width: 1024px){
+    .barra-de-navegacion{
+        height: 7rem;
+    }
+    .icono-home{
+        margin-left: 1rem;
+        transform: translateX(50%);
+    }
+    #first-big-container{        
+        margin-top: 7rem;
+    }
+    .modal-video .content{
+        margin: auto;
+        width: 560px;
+        height: 315px;
+        
+    }
+    .sub-video-container{
+        margin: auto;
+        margin-bottom: 2%;
+        width: 560px;
+        height: 315px;
+    }
 }
